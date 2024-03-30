@@ -39,7 +39,48 @@ Before running this application, ensure that you have the following installed:
    ```
 
 3. Install dependencies for both frontend and backend:
-   cd frontend
+
+   ```cd frontend
    npm install
    cd ../backend
    npm install
+   ```
+
+4. Configure MySQL and Backend Environment Variables:
+   a. Create a new MySQL database for the application.
+   b. Create .env file in the backend folder and paste the following:
+   `PORT=3001
+HOST=localhost
+DB_USER=root
+DB_PASSWORD=mysql12345
+DATABASE=fib_db
+`
+
+5. Configure Frontend Environment Variables
+   Create .env file in the frontend folder and paste the following:
+   `REACT_APP_PROTOCOL=http
+REACT_APP_HOST=localhost
+REACT_APP_BACKEND_PORT=3001
+`
+
+## Usage
+
+1. Start the Backend Server
+
+   ```cd backend
+   node server.js
+   ```
+
+2. Start the frontend server
+
+   ```cd frontend
+   npm start
+   ```
+
+3. Access the web application in your browser at http://localhost:3000.
+
+4. Input the value of n into the provided field.
+
+5. Click the "Submit" button to generate the first n Fibonacci numbers.
+
+6. View the generated Fibonacci numbers displayed on the page.
