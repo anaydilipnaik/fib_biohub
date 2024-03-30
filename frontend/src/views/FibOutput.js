@@ -45,7 +45,9 @@ const FibOutput = () => {
 
   return (
     <div style={mainDivStyles}>
-      <p style={paragraphStyles}>{fibList}</p>
+      <p style={paragraphStyles}>
+        {fibList === "" ? "No Fibonacci Numbers Generated" : fibList}
+      </p>
       <Link to="/">
         <button style={buttonStyles}>Return to Home</button>
       </Link>
