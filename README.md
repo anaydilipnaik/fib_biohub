@@ -40,7 +40,8 @@ Before running this application, ensure that you have the following installed:
 
 3. Install dependencies for both frontend and backend:
 
-   ```cd frontend
+   ```bash
+   cd frontend
    npm install
    cd ../backend
    npm install
@@ -50,7 +51,8 @@ Before running this application, ensure that you have the following installed:
    a. Create a new MySQL database for the application.
    b. Create .env file in the backend folder and paste the following:
 
-   ```PORT=3001
+   ```bash
+    PORT=3001
     HOST=localhost
     DB_USER=root
     DB_PASSWORD=mysql12345
@@ -59,7 +61,8 @@ Before running this application, ensure that you have the following installed:
 
 5. Configure Frontend Environment Variables
    Create .env file in the frontend folder and paste the following:
-   ```REACT_APP_PROTOCOL=http
+   ```bash
+    REACT_APP_PROTOCOL=http
     REACT_APP_HOST=localhost
     REACT_APP_BACKEND_PORT=3001`
    ```
@@ -68,13 +71,15 @@ Before running this application, ensure that you have the following installed:
 
 1. Start the Backend Server
 
-   ```cd backend
+   ```bash
+   cd backend
    node index.js
    ```
 
 2. Start the frontend server
 
-   ```cd frontend
+   ```bash
+   cd frontend
    npm start
    ```
 
