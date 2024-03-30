@@ -5,14 +5,15 @@ const Home = () => {
   const [n, setN] = useState("");
   const [fibNumbers, setFibNumbers] = useState([]);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const response = await calculateFib({ n });
-      setFibNumbers(response.data.fibNumbers);
-    } catch (error) {
-      console.error("Error:", error);
-    }
+    calculateFib({ n })
+      .then((res) => {
+        setFibNumbers(res.data.fibNumbers);
+      })
+      .catch((err) => {
+        console.error("Error:", err);
+      });
   };
 
   return (
