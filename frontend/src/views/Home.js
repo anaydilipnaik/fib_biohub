@@ -18,11 +18,11 @@ const Home = () => {
   const buttonStyles = {
     padding: "10px 20px",
     fontSize: "16px",
-    backgroundColor: "#007bff",
+    backgroundColor: n === "" ? "#808080" : "#007bff",
     color: "#fff",
     border: "none",
     borderRadius: "4px",
-    cursor: "pointer",
+    cursor: n === "" ? "auto" : "pointer",
     textDecoration: "none",
   };
 
@@ -47,7 +47,9 @@ const Home = () => {
           />
         </label>
         <Link to="/fib-output" style={{ textDecoration: "none" }}>
-          <button style={buttonStyles}>Submit</button>
+          <button disabled={n === "" ? true : false} style={buttonStyles}>
+            Submit
+          </button>
         </Link>
       </form>
     </div>
