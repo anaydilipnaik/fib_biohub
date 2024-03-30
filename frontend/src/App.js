@@ -1,4 +1,4 @@
-// App.js
+// Boilerplate generated using ChatGPT, and modified by me as needed
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./views/Home";
