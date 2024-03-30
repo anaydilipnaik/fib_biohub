@@ -48,7 +48,9 @@ Before running this application, ensure that you have the following installed:
    ```
 
 4. Configure MySQL and Backend Environment Variables:
+
    a. Create a new MySQL database for the application.
+
    b. Create .env file in the backend folder and paste the following:
 
    ```bash
@@ -60,7 +62,9 @@ Before running this application, ensure that you have the following installed:
    ```
 
 5. Configure Frontend Environment Variables
+
    Create .env file in the frontend folder and paste the following:
+
    ```bash
     REACT_APP_PROTOCOL=http
     REACT_APP_HOST=localhost
