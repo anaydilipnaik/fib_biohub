@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import { calculateFib } from "./controllers/fib";
 
 function App() {
   const [n, setN] = useState("");
@@ -8,9 +8,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3001/fibonacci", {
-        n,
-      });
+      const response = await calculateFib({ n });
       setFibNumbers(response.data.fibNumbers);
     } catch (error) {
       console.error("Error:", error);
