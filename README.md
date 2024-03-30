@@ -49,26 +49,27 @@ Before running this application, ensure that you have the following installed:
 4. Configure MySQL and Backend Environment Variables:
    a. Create a new MySQL database for the application.
    b. Create .env file in the backend folder and paste the following:
-   `PORT=3001
-HOST=localhost
-DB_USER=root
-DB_PASSWORD=mysql12345
-DATABASE=fib_db
-`
+
+   ```PORT=3001
+    HOST=localhost
+    DB_USER=root
+    DB_PASSWORD=mysql12345
+    DATABASE=fib_db
+   ```
 
 5. Configure Frontend Environment Variables
    Create .env file in the frontend folder and paste the following:
-   `REACT_APP_PROTOCOL=http
-REACT_APP_HOST=localhost
-REACT_APP_BACKEND_PORT=3001
-`
+   ```REACT_APP_PROTOCOL=http
+    REACT_APP_HOST=localhost
+    REACT_APP_BACKEND_PORT=3001`
+   ```
 
 ## Usage
 
 1. Start the Backend Server
 
    ```cd backend
-   node server.js
+   node index.js
    ```
 
 2. Start the frontend server
