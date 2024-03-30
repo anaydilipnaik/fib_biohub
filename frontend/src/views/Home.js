@@ -46,7 +46,7 @@ const Home = () => {
             placeholder="Enter the count"
           />
         </label>
-        <Link to="/fib-output" style={{ textDecoration: "none" }}>
+        <Link to="/fib-output">
           <button disabled={n === "" ? true : false} style={buttonStyles}>
             Submit
           </button>
