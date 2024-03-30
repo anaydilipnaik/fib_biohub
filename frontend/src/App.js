@@ -1,19 +1,21 @@
+// App.js
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-// All pages go here
 import Home from "./views/Home";
+import FibOutput from "./views/FibOutput";
+import { NProvider } from "./contexts/Context";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <Router>
+    <Router>
+      <NProvider>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/fib-output" element={<FibOutput />} />
         </Routes>
-      </Router>
-    </>
+      </NProvider>
+    </Router>
   );
-}
+};
 
 export default App;

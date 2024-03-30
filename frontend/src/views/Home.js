@@ -1,24 +1,14 @@
-import React, { useState } from "react";
-import { calculateFib } from "../controllers/fib";
+// Home.js
+import React from "react";
+import { Link } from "react-router-dom";
+import { useN } from "../contexts/Context";
 
 const Home = () => {
-  const [n, setN] = useState("");
-  const [fibNumbers, setFibNumbers] = useState([]);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    calculateFib({ n })
-      .then((res) => {
-        setFibNumbers(res.data.fibNumbers);
-      })
-      .catch((err) => {
-        console.error("Error:", err);
-      });
-  };
+  const { n, setN } = useN();
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form>
         <label>
           Enter n:
           <input
@@ -28,13 +18,10 @@ const Home = () => {
             required
           />
         </label>
-        <button type="submit">Submit</button>
+        <Link to="/fib-output">
+          <button>Submit</button>
+        </Link>
       </form>
-      <ul>
-        {fibNumbers.map((number, index) => (
-          <li key={index}>{number}</li>
-        ))}
-      </ul>
     </div>
   );
 };
