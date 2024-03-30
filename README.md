@@ -1,1 +1,45 @@
-#fib
+# Fibonacci Web App
+
+## Introduction
+
+This project is a simple web application that allows users to generate the first n Fibonacci numbers. The application consists of a frontend built with React and a backend built with Node.js and Express. The backend stores computed Fibonacci numbers in a MySQL database to avoid recomputation.
+
+## Features
+
+- Users can input the value of n to generate the first n Fibonacci numbers.
+- The backend stores computed Fibonacci numbers in a MySQL database to avoid recomputation.
+- Frontend provides a simple and intuitive user interface for inputting n and displaying the generated Fibonacci numbers.
+
+## Technologies Used
+
+- React: A JavaScript library for building user interfaces.
+- Node.js: A JavaScript runtime environment for building server-side applications.
+- Express: A minimalist web framework for Node.js.
+- MySQL: A relational database management system.
+
+## Prerequisites
+
+Before running this application, ensure that you have the following installed:
+
+- Node.js and npm: Download and install from [Node.js official website](https://nodejs.org/).
+- MySQL: Download and install from [MySQL official website](https://www.mysql.com/).
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/anaydilipnaik/fib_biohub.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd fib-biohub
+   ```
+
+3. Install dependencies for both frontend and backend:
+   cd frontend
+   npm install
+   cd ../backend
+   npm install
