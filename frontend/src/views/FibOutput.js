@@ -8,6 +8,24 @@ const FibOutput = () => {
   const { n } = useN();
   const [fibNumbers, setFibNumbers] = useState([]);
 
+  const buttonStyles = {
+    padding: "10px 20px",
+    fontSize: "16px",
+    backgroundColor: "#007bff",
+    color: "#fff",
+    border: "none",
+    borderRadius: "4px",
+    cursor: "pointer",
+    textDecoration: "none",
+  };
+
+  const paragraphStyles = {
+    padding: "10px 20px",
+    fontSize: "18px",
+    lineHeight: "1.5",
+    marginBottom: "10px",
+  };
+
   useEffect(() => {
     calculateFib({ n })
       .then((res) => {
@@ -18,15 +36,19 @@ const FibOutput = () => {
       });
   }, [n]);
 
+  const fibList = fibNumbers.join(", ");
+
   return (
-    <div>
-      <ul>
-        {fibNumbers.map((number, index) => (
-          <li key={index}>{number}</li>
-        ))}
-      </ul>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      <p style={paragraphStyles}>{fibList}</p>
       <Link to="/">
-        <button>Return to Home</button>
+        <button style={buttonStyles}>Return to Home</button>
       </Link>
     </div>
   );
